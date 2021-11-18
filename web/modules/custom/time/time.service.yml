@@ -1,0 +1,4 @@
+services:
+  time.time_now:
+  class: Drupal\time\TimeNow
+  arguments: ['@config.factory']

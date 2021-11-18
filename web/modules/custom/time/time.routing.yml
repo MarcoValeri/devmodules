@@ -1,0 +1,7 @@
+time.time:
+  path: '/time'
+  defaults:
+    _controller: Drupal\time\Controller\TimeController::timeMessage
+    _title: 'Time Route'
+  requirements:
+    _permission: 'access content'
