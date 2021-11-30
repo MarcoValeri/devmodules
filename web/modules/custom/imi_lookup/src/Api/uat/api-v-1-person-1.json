@@ -1,0 +1,102 @@
+{
+    "person_id": 123456,
+    "created": "10\/07\/2014",
+    "name_first": "Bill",
+    "name_middle": "",
+    "name_last": "Gate",
+    "name_title": "Mr",
+    "name_preferred": "John",
+    "name_initials": "D",
+    "home_number": "01234567890",
+    "work_number": "07481486394",
+    "mobile_number": "",
+    "personal_email": "personalemail@example.com",
+    "work_email": "gate@outlook.com",
+    "deceased": 0,
+    "preferred_number": "home_number",
+    "preferred_email": "personal_email",
+    "preferred_address": "home",
+    "preferred_contact_method": "email",
+    "cross_sell": null,
+    "post_nominals": "AMIMI",
+    "employment_status": "employed",
+    "job_title": "Estimator",
+    "date_of_birth": "26\/11\/1984",
+    "name": "John Doe",
+    "phone": "01234567890",
+    "email": "personalemail@example.com",
+    "roles": [
+        "ROLE_MEMBER",
+        "ROLE_ACCREDITED_ATA",
+        "ROLE_ACCREDITED",
+        "ROLE_MEMBER_ASSOCIATE",
+        "ROLE_MEMBER_PR",
+        "ROLE_CENTRE_STAFF",
+        "MEMBER_TYPE_FULL",
+        "ROLE_ACCREDITED_PR",
+        "MEMBER_ENG_CAE"
+    ],
+    "anonymised": false,
+    "sources": [],
+    "home_address": {
+        "address_line_1": "22 Acacia Avenue",
+        "address_line_2": "Gomer",
+        "address_line_3": "Gosport",
+        "address_line_4": "Hampshire",
+        "postcode": "PO12 ABC",
+        "home_nation": "England",
+        "country": "gb"
+    },
+    "organisations": {
+        "is_employed_by": [
+            {
+                "name": "Boycies Garage",
+                "remotes": {
+                    "membership": "123456",
+                    "contacts": 12345
+                }
+            }
+        ]
+    },
+    "remotes": {
+        "ata": "AT01234567890",
+        "cpde": "1234",
+        "membership": "20180200727",
+        "payment": "12345",
+        "qlms": "1234-01-01",
+        "task": "12345",
+        "theimi.org.uk": "1",
+        "contacts": 12345,
+        "centre": 123456
+    },
+    "work_address": {
+        "organisation_name": "Boycies Garage",
+        "organisation_id": 12345,
+        "location_id": 12345,
+        "address_line_1": "22 Acacia Avenue",
+        "address_line_2": "Gomer",
+        "address_line_3": "Gosport",
+        "address_line_4": "Hampshire",
+        "postcode": "PO12 ABC",
+        "home_nation": "England",
+        "country": "gb",
+        "longitude": -2.6995975,
+        "latitude": 52.0524559
+    },
+    "work_website": null,
+    "taxonomy": {
+        "jobfamily": {
+            "name": "Job Family : Job Role",
+            "tags": {
+                "jobfamily_016": "Technical: Vehicle Damage Assessor"
+            }
+        },
+        "sourcechannel": {
+            "name": "Source Channel : Source Detail",
+            "tags": {
+                "sourcechannel_021": "ZDoNotUse: NVQ Candidate"
+            }
+        }
+    },
+    "modified": 1614943562
+}

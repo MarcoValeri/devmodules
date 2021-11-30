@@ -1,0 +1,14 @@
+imi_lookup.formdemo:
+  path: '/admin/config/lookup'
+  defaults:
+    _form: '\Drupal\imi_lookup\Form\ImiLookupForm'
+    _title: 'Form for member ID'
+  requirements:
+    _permission: 'access content'
+imi_lookup.api:
+  path: '/my-api'
+  defaults:
+    _controller: 'Drupal\imi_lookup\Controller\ImiLookupController::content'
+    _title: 'Api for member ID'
+  requirements:
+    _permission: 'access content'

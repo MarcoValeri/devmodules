@@ -1,0 +1,6 @@
+name: Admin module for API lookup
+description: For get a formatted JSON response by member ID
+type: module
+package: Heavy Penguin
+core: 8.x
+core_version_requirement: ^8 || ^9
