@@ -5,3 +5,10 @@ imi_template.formdemo:
     _title: 'Api for member ID'
   requirements:
     _permission: 'access content'
+imi_template.api:
+  path: '/admin/template/lookup'
+  defaults:
+    _form: '\Drupal\imi_template\Form\ImiTemplateForm'
+    _title: 'Form for member ID'
+  requirements:
+    _permission: 'access content'
