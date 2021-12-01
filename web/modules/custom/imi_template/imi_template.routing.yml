@@ -1,0 +1,7 @@
+imi_template.formdemo:
+  path: '/config/template/lookup'
+  defaults:
+    _controller: 'Drupal\imi_template\Controller\ImiTemplateController::content'
+    _title: 'Api for member ID'
+  requirements:
+    _permission: 'access content'

@@ -17,15 +17,25 @@ class ImiLookupForm extends FormBase {
      */
     public function getPerson($environment) {
 
-        // Get data by json api
-        // $api = file_get_contents('C:\xampp\htdocs\devmodules\web\modules\custom\imi_lookup\src\Api\api-v-1-person-1.json');
-        // $person = json_decode($api, TRUE);
-
         $path = "C:\\xampp\htdocs\devmodules\web\modules\custom\imi_lookup\src\Api\\" . $environment . "\api-v-1-person-1.json";
         $api = file_get_contents($path);
         $person = json_decode($api, TRUE);
 
         return $person;
+
+    }
+
+    /**
+     * @return Drupal\imi_lookup\Api
+     */
+    public function getJsonFormatted($environment) {
+
+        $path = "C:\\xampp\htdocs\devmodules\web\modules\custom\imi_lookup\src\Api\\" . $environment . "\api-v-1-person-1.json";
+        $api = file_get_contents($path);
+        $person = json_decode($api, TRUE);
+
+        //return $api;
+        return json_encode($person, JSON_PRETTY_PRINT);
 
     }
 
@@ -86,6 +96,7 @@ class ImiLookupForm extends FormBase {
         $person_surname = "";
         $person_email = "";
         $person_phone = "";
+        $person_formatted_json = "";
 
         if ($submitted_member_id != $person['person_id']) {
             $status = "Member ID not found";
@@ -96,6 +107,7 @@ class ImiLookupForm extends FormBase {
             $person_surname = $person['name_last'];
             $person_email = $person['work_email'];
             $person_phone = $person['work_number'];
+            $person_formatted_json = $this->getJsonFormatted($environment);
         }
 
         $this->messenger()->addMessage(t(
@@ -106,7 +118,8 @@ class ImiLookupForm extends FormBase {
                 Member name: @person_name<br>
                 Member surname: @person_surname<br>
                 Member email: @person_email<br>
-                Member phone: @person_phone<br>",
+                Member phone: @person_phone<br>
+                Formatted json: @formatted_json",
             [
                 '@member_id' => $submitted_member_id,
                 '@environment' => $environment,
@@ -116,6 +129,7 @@ class ImiLookupForm extends FormBase {
                 '@person_surname' => $person_surname,
                 '@person_email' => $person_email,
                 '@person_phone' => $person_phone,
+                '@formatted_json' => $person_formatted_json,
             ]
         ));
 

@@ -1,0 +1,6 @@
+name: API lookup with template
+description: Member ID return formetted JSON
+type: module
+package: Heavy Penguin
+core: 8.x
+core_version_requirement: ^8 || ^9

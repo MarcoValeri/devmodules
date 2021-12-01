@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Implementing hook_theme().
+ */
+function imi_template_theme($existing, $type, $theme, $path) {
+
+    return [
+        'imi_members' => [
+            'variables' => ['title' => ''],
+        ]
+    ];
+
+}
