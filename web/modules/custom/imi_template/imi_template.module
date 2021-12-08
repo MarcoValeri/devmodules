@@ -6,6 +6,8 @@
  */
 function imi_template_theme($existing, $type, $theme, $path) {
 
+    $test = "Hello PHP";
+
     return [
         'imi_members' => [
             'render element' => 'form',

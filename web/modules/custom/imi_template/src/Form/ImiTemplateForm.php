@@ -61,16 +61,14 @@ class ImiTemplateForm extends FormBase {
      */
     public function submitForm(array &$form, FormStateInterface $form_state) {
 
-        // $value_member_id = $form_state->getValue('member_id');
+        $value_member_id = $form_state->getValue('member_id');
 
-        // $this->messenger()->addMessage(t(
-        //         "You entered @member_id<br>",
-        //     [
-        //         '@member_id' => $value_member_id,
-        //     ]
-        // ));
-
-        $field = $form_state->getValues();
+        $this->messenger()->addMessage(t(
+                "You entered @member_id<br>",
+            [
+                '@member_id' => $value_member_id,
+            ]
+        ));
 
     }
 
